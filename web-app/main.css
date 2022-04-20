@@ -50,6 +50,34 @@ a{
 
 /* tips */
 .tippy-box[data-theme~='n3c'] {
-    @apply bg-theme1 text-white dark:!bg-theme6 dark:!text-theme1
+    @apply bg-theme6 text-theme1 font-bold
+}
+.tippy-box[data-theme~='n3c'][data-placement^='top'] > .tippy-arrow::before {
+    @apply border-t-theme6
+}
+.tippy-box[data-theme~='n3c'][data-placement^='bottom'] > .tippy-arrow::before {
+    @apply border-b-theme6
+}
+.tippy-box[data-theme~='n3c'][data-placement^='left'] > .tippy-arrow::before {
+    @apply border-l-theme6
+}
+.tippy-box[data-theme~='n3c'][data-placement^='right'] > .tippy-arrow::before {
+    @apply border-r-theme6
 }
 
+/* tables */
+.table-striped tbody tr:nth-child(odd){
+    @apply bg-gray-300/40 dark:bg-gray-500/50
+}
+
+.table-striped tbody tr td{
+    @apply px-2 py-1
+}
+
+.table-striped tbody tr:hover{
+    @apply !bg-theme6 dark:!text-black
+}
+
+.row-separator{
+    @apply !bg-gray-600 dark:!bg-gray-200 !text-white dark:!text-gray-800 font-bold
+}

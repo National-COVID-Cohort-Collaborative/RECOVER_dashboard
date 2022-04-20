@@ -1,7 +1,9 @@
 
 <template>
-    <div class="w-full flex justify-around items-center p-2 darkMode shadow sticky top-0 z-10 bg-gray-200 dark:bg-theme2">
-        <router-link :to="{ name:'Home' }">Home</router-link>
+    <div class="w-full p-2 darkMode shadow sticky top-0 z-10 bg-gray-200 dark:bg-theme2 flex justify-around items-center flex-wrap">
+        <div class="container flex justify-start items-center space-x-2">
+          <router-link v-for="route in routes" :key="route.name" :to="{ name:route.name }">{{route.name}}</router-link>
+        </div>
         <button type="button" class="dark:bg-blue-200 bg-indigo-900 px-2 py-1 rounded-full" @click="toggleDarkMode">
           <i class="fas" :class="[!darkMode ? 'fa-moon text-cyan-200' : 'fa-sun text-yellow-400']"></i>
         </button>
@@ -11,6 +13,7 @@
 <script>
 import { onMounted, computed } from 'vue'
 import { useStore } from 'vuex'
+import {routes} from '../router/routes'
 
 export default {
   setup() {
@@ -33,7 +36,8 @@ export default {
     // expose to template and other options API hooks
     return {
       toggleDarkMode,
-      darkMode
+      darkMode,
+      routes
     }
   }
 }

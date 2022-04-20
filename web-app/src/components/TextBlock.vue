@@ -1,6 +1,6 @@
 
 <template>
-    <div v-html="txt"></div>
+    <div class="space-y-3" v-html="txt"></div>
 </template>
 
 <script>

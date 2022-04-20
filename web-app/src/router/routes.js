@@ -6,9 +6,19 @@ export const routes = [
         component: () => import('../views/Home.vue'),
     },
     {
-        path: '/figure4',
-        name: 'Figure4',
-        component: () => import('../views/Figure4.vue'),
+        path: '/model-features',
+        name: 'ModelFeatures',
+        component: () => import('../views/ModelFeatures.vue'),
+    },
+    {
+        path: '/cohort-characteristics',
+        name: 'CohortCharacteristics',
+        component: () => import('../views/Cohort.vue'),
+    },
+    {
+        path: '/demographics',
+        name: 'Demographics',
+        component: () => import('../views/Demographics.vue'),
     },
     // {
     //     path: "/:catchAll(.*)",
