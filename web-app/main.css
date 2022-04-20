@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.darkMode{
+    @apply dark:bg-slate-800 dark:text-slate-100
+}
+
+/* Figure 4 */
+#fig4.tabulator-cell{
+    @apply px-1
+}
+.tabulator-cell:nth-child(even){
+    @apply border-0 !border-r-white dark:!border-r-slate-800
+}
+.tabulator-col-title{
+    @apply text-center
+}
