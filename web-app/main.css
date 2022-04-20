@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* typography */
+body{
+    @apply text-base
+}
+h1{
+    @apply text-lg md:text-3xl
+}
+h2{
+    @apply text-sm md:text-xl
+}
+h3{
+    @apply text-sm md:text-lg
+}
+h4{
+    @apply text-sm md:text-base
+}
+h5{
+    @apply text-sm md:text-base
+}
+small{
+    @apply text-xs md:text-sm
+}
+
+a{
+    @apply text-theme5 hover:text-theme6 visited:text-theme3 dark:visited:text-theme6 focus:text-theme4
+}
+
+.route-active{
+    @apply text-theme4 dark:text-theme6 font-bold
+}
 
 .darkMode{
     @apply dark:bg-slate-800 dark:text-slate-100
@@ -17,3 +47,9 @@
 .tabulator-col-title{
     @apply text-center
 }
+
+/* tips */
+.tippy-box[data-theme~='n3c'] {
+    @apply bg-theme1 text-white dark:!bg-theme6 dark:!text-theme1
+}
+

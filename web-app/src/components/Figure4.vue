@@ -1,9 +1,9 @@
 
 <template>
   <div class="p-2">
-        <div class="flex justify-center">
+        <div class="flex justify-center w-full">
             <div class="text-center p-1">
-                <small class="m-0 block">How to read these plots</small>
+                <small class="m-0 block"><i class="fas fa-info-circle text-blue-400"></i> How to read these plots</small>
                 <svg version="1.1" width="150" id="Layer_1" x="0px" y="0px"
                     viewBox="0 0 42.7 10.4" style="enable-background:new 0 0 42.7 10.4;" xml:space="preserve">
                 <rect 
@@ -37,7 +37,9 @@
                 </svg>
             </div>
         </div>
-        <div id="fig4"></div>
+        <div class="flex justify-center w-full">
+          <div id="fig4"></div>
+        </div>
     </div>
 </template>
 
@@ -177,7 +179,7 @@ export default {
                     {
                         title:"Importance", 
                         field:"nonhosp_importance", 
-                        cssClass:"dark:bg-slate-800 dark:text-white",
+                        cssClass:"dark:!bg-slate-800 dark:text-white",
                         sorter: 'number',
                         formatterParams:{
                             color: function(value){
@@ -192,7 +194,7 @@ export default {
                     {
                         title:"Odds Ratio (95% CI)", 
                         field:"nonhosp_odds_box",
-                        cssClass:"dark:bg-slate-800 dark:text-white",
+                        cssClass:"dark:!bg-slate-800 dark:text-white",
                         formatter: d3_dot,
                         formatterParams:{
                             color:'fill-theme1 dark:fill-theme4',
@@ -214,7 +216,7 @@ export default {
                     {
                         title:"Importance", 
                         field:"hosp_importance",
-                        cssClass:"dark:bg-slate-800 dark:text-white",
+                        cssClass:"dark:!bg-slate-800 dark:text-white",
                         sorter: 'number',
                         formatterParams:{
                             color: function(value){
@@ -229,7 +231,7 @@ export default {
                     {
                         title:"Odds Ratio (95% CI)", 
                         field:"hosp_odds_box",
-                        cssClass:"dark:bg-slate-800 dark:text-white",
+                        cssClass:"dark:!bg-slate-800 dark:text-white",
                         formatter: d3_dot,
                         formatterParams:{
                             color:'fill-theme2 dark:fill-theme5',
@@ -251,7 +253,7 @@ export default {
                     {
                         title:"Importance", 
                         field:"all_importance",
-                        cssClass:"dark:bg-slate-800 dark:text-white",
+                        cssClass:"dark:!bg-slate-800 dark:text-white",
                         sorter: 'number',
                         formatterParams:{
                             color: function(value){
@@ -266,7 +268,7 @@ export default {
                     {
                         title:"Odds Ratio (95% CI)", 
                         field:"all_odds_box",
-                        cssClass:"dark:bg-slate-800 dark:text-white",
+                        cssClass:"dark:!bg-slate-800 dark:text-white",
                         formatter: d3_dot,
                         formatterParams:{
                             color:'fill-theme3 dark:fill-theme6',
@@ -285,8 +287,8 @@ export default {
         ],
     });
     }
-    // axios.get('https://labs.cd2h.org/n3c-cohort/feeds/long_covid_summary.jsp').then(res=>{
-    axios.get('/data.json').then(res=>{
+    axios.get('https://labs.cd2h.org/n3c-cohort/feeds/long_covid_summary.jsp').then(res=>{
+    // axios.get('/data.json').then(res=>{
         //get box figure boundaries
         let boxConfig ={};
         //collect all numbers of 
@@ -403,7 +405,9 @@ export default {
 
     //give enough time to render before initializing tooltips
     setTimeout(function(){
-        tippy('[data-toggle]');
+        tippy('[data-toggle]',{
+          theme: 'n3c'
+        });
     }, 1000)     
     
     // expose to template and other options API hooks

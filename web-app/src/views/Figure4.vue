@@ -2,7 +2,10 @@
 <template>
   <section class="flex justify-center items-start min-h-screen py-10 darkMode">
     <div class="rounded-xl bg-gray-400/20">
-      <h1 class="text-6xl">Figure 4</h1>
+      <div class="container m-auto space-y-10">
+        <h1>Figure 4</h1>
+        <TextBlock name="intro"></TextBlock>
+      </div>
       <Figure4></Figure4>
     </div>
   </section>
