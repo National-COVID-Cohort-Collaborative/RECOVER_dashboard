@@ -1,18 +1,26 @@
 
 export const layout = {
     state: () => ({ 
-        darkMode: false
+        noNav: false
     }),
     mutations: {
-        toggleDarkMode(state){
-            state.darkMode = !state.darkMode;
+        setNoNav(state, payload){
+            state.noNav = payload.value;
         }
     },
     actions: {
+        checkParams({commit}){
+            var url = new URL(window.location.href);
+            var nav = url.searchParams.get("no-nav");
+            if (nav == 'true' || nav == '1') {
+                console.log('%c No Nav Mode', 'color:limegreen')
+                commit('setNoNav', {'value': true});
+            }
+        }
     },
     getters: {
-        darkMode: (state) => {
-            return state.darkMode;
+        noNav: (state) => {
+            return state.noNav;
         }
     }
 }

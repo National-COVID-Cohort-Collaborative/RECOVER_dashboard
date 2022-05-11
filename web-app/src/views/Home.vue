@@ -1,8 +1,8 @@
 
 <template>
-  <section class="min-h-screen py-10 w-full darkMode space-y-10 leading-snug">
+  <section class="min-h-screen py-10 w-full space-y-10 leading-snug">
     <div class="container m-auto">
-      <TextBlock name="intro"></TextBlock>
+      <TextBlock name="intro_paragraphs"></TextBlock>
     </div>
     <div class="flex justify-center items-start container m-auto">
       <ul class="list-disc">

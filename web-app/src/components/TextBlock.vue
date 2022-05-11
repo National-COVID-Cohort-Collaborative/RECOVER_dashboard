@@ -13,13 +13,9 @@ export default {
     },
     setup(props) {
 
-        let blocks = {
-            'intro': 'https://n3c.cd2h.org/dashboard/caption.jsp?tag=intro_paragraphs&schema=n3c_recover.caption'
-        }
-
         let txt = ref('')
 
-        axios.get(blocks[props.name])
+        axios.get(`https://n3c.cd2h.org/dashboard/caption.jsp?tag=${props.name}&schema=n3c_recover.caption`)
         .then(res=>{
             txt.value = res.data;
         }).catch((err) => {

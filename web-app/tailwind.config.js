@@ -8,6 +8,15 @@ module.exports = {
     theme: {
         colors:{
             ...colors,
+            main: {
+              DEFAULT: '#14294f',
+            },
+            sec: {
+              DEFAULT: '#ffc656',
+            },
+            ter: {
+              DEFAULT: '#f7f5ef',
+            },
             theme1: {
               DEFAULT: '#003f5c',
             },

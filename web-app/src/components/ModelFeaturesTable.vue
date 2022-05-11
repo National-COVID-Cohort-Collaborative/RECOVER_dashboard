@@ -14,7 +14,7 @@
                 <g id="left" data-toggle="tooltip" 
                 data-tippy-placement="bottom" 
                 data-tippy-content="Decreased risk of condition">
-                    <rect class="fill-gray-100 dark:fill-gray-500" width="21" height="10.4"/>
+                    <rect class="fill-gray-100" width="21" height="10.4"/>
                     <rect x="5.8" y="5.2"
                     data-toggle="tooltip" 
                     data-tippy-placement="top" 
@@ -26,7 +26,7 @@
                 <g id="right" data-toggle="tooltip" 
                 data-tippy-placement="bottom" 
                 data-tippy-content="Increased risk of condition">
-                    <rect x="21.6" class="fill-gray-100 dark:fill-gray-500" width="21" height="10.4"/>
+                    <rect x="21.6" class="fill-gray-100" width="21" height="10.4"/>
                     <rect x="27.1" y="4.9" class="fill-gray-400 hover:fill-rose-400" data-toggle="tooltip" 
                     data-tippy-placement="top" 
                     data-tippy-content="95% confidence interval" width="9.7" height="0.5"/>
@@ -122,7 +122,7 @@ export default {
                     .attr("x2", function(d) { return x(v[2]); })
                     .attr("y1", height/2)
                     .attr("y2", height/2)
-                    .attr("class", "stroke-gray-300 dark:stroke-white")
+                    .attr("class", "stroke-gray-300")
                     .attr("stroke-width", "3px")
 
                 svg.append("circle")
@@ -163,7 +163,7 @@ export default {
         columns:[ 
             {
                 title:"Feature", 
-                cssClass:"dark:!bg-slate-800 dark:text-white px-4",
+                cssClass:"px-4",
                 field:"feature", 
                 // frozen:true,
                 formatter: function(cell){
@@ -174,17 +174,17 @@ export default {
             },
             {
                 title:'Qualifying Non-hospitalized Patients',
-                cssClass:"dark:!bg-slate-800 text-theme1 dark:text-theme4",
+                cssClass:"text-theme1",
                 columns:[
                     {
                         title:"Importance", 
                         field:"nonhosp_importance", 
-                        cssClass:"dark:!bg-slate-800 dark:text-white",
+                        cssClass:"",
                         sorter: 'number',
                         formatterParams:{
                             color: function(value){
                                 if(value !== "*"){
-                                    return 'fill-theme1 dark:fill-theme4'
+                                    return 'fill-theme1'
                                 }
                             },
                             max: nonHospMax
@@ -194,12 +194,12 @@ export default {
                     {
                         title:"Odds Ratio (95% CI)", 
                         field:"nonhosp_odds_box",
-                        cssClass:"dark:!bg-slate-800 dark:text-white",
+                        cssClass:"",
                         formatter: d3_dot,
                         formatterParams:{
-                            color:'fill-theme1 dark:fill-theme4',
-                            stroke: 'stroke-theme1 dark:stroke-theme4',
-                            textColor: 'text-theme1 dark:text-theme4'
+                            color:'fill-theme1',
+                            stroke: 'stroke-theme1',
+                            textColor: 'text-theme1'
                         },
                         // headerSort:false
                         sorter:function(a, b, aRow, bRow, column, dir, sorterParams){
@@ -211,17 +211,17 @@ export default {
             },
             {   
                 title:'Qualifying Hospitalized Patients', 
-                cssClass:"dark:!bg-slate-800 text-theme2 dark:text-theme5",
+                cssClass:"text-theme2",
                 columns:[
                     {
                         title:"Importance", 
                         field:"hosp_importance",
-                        cssClass:"dark:!bg-slate-800 dark:text-white",
+                        cssClass:"",
                         sorter: 'number',
                         formatterParams:{
                             color: function(value){
                                 if(value !== "*"){
-                                    return 'fill-theme2 dark:fill-theme5'
+                                    return 'fill-theme2'
                                 }
                             },
                             max: hospMax
@@ -231,12 +231,12 @@ export default {
                     {
                         title:"Odds Ratio (95% CI)", 
                         field:"hosp_odds_box",
-                        cssClass:"dark:!bg-slate-800 dark:text-white",
+                        cssClass:"",
                         formatter: d3_dot,
                         formatterParams:{
-                            color:'fill-theme2 dark:fill-theme5',
-                            stroke: 'stroke-theme2 dark:stroke-theme5',
-                            textColor: 'text-theme2 dark:text-theme5'
+                            color:'fill-theme2',
+                            stroke: 'stroke-theme2',
+                            textColor: 'text-theme2'
                         },
                         // headerSort:false
                         sorter:function(a, b, aRow, bRow, column, dir, sorterParams){
@@ -248,17 +248,17 @@ export default {
             },
             {   
                 title:'All Qualifying Patients',
-                cssClass:"dark:!bg-slate-800 text-theme3 dark:text-theme6",
+                cssClass:"text-theme3",
                 columns:[
                     {
                         title:"Importance", 
                         field:"all_importance",
-                        cssClass:"dark:!bg-slate-800 dark:text-white",
+                        cssClass:"",
                         sorter: 'number',
                         formatterParams:{
                             color: function(value){
                                 if(value !== "*"){
-                                    return 'fill-theme3 dark:fill-theme6'
+                                    return 'fill-theme3'
                                 }
                             },
                             max: allMax
@@ -268,12 +268,12 @@ export default {
                     {
                         title:"Odds Ratio (95% CI)", 
                         field:"all_odds_box",
-                        cssClass:"dark:!bg-slate-800 dark:text-white",
+                        cssClass:"",
                         formatter: d3_dot,
                         formatterParams:{
-                            color:'fill-theme3 dark:fill-theme6',
-                            stroke: 'stroke-theme3 dark:stroke-theme6',
-                            textColor: 'text-theme3 dark:text-theme6'
+                            color:'fill-theme3',
+                            stroke: 'stroke-theme3',
+                            textColor: 'text-theme3'
                         },
                         // headerSort:false
                         sorter:function(a, b, aRow, bRow, column, dir, sorterParams){

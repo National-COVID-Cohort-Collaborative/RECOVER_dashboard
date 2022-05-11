@@ -25,24 +25,21 @@ small{
     @apply text-xs md:text-sm
 }
 
-a{
-    @apply text-theme5 hover:text-theme6 visited:text-theme3 dark:visited:text-theme6 focus:text-theme4
-}
+/* a{
+    @apply text-theme5 hover:text-theme6 visited:text-theme3 focus:text-theme4
+} */
 
 .route-active{
-    @apply text-theme4 dark:text-theme6 font-bold
+    @apply !text-sec font-bold
 }
 
-.darkMode{
-    @apply dark:bg-slate-800 dark:text-slate-100
-}
 
 /* Figure 4 */
 #fig4.tabulator-cell{
     @apply px-1
 }
 .tabulator-cell:nth-child(even){
-    @apply border-0 !border-r-white dark:!border-r-slate-800
+    @apply border-0 !border-r-white
 }
 .tabulator-col-title{
     @apply text-center
@@ -67,7 +64,7 @@ a{
 
 /* tables */
 .table-striped tbody tr:nth-child(odd){
-    @apply bg-gray-300/40 dark:bg-gray-500/50
+    @apply bg-gray-300/40
 }
 
 .table-striped tbody tr td{
@@ -75,9 +72,9 @@ a{
 }
 
 .table-striped tbody tr:hover{
-    @apply !bg-theme6 dark:!text-black
+    @apply !bg-theme6
 }
 
 .row-separator{
-    @apply !bg-gray-600 dark:!bg-gray-200 !text-white dark:!text-gray-800 font-bold
+    @apply !bg-gray-600 !text-white font-bold
 }
