@@ -1,7 +1,7 @@
 # RECOVER_dashboard
 RECOVER LONG COVID dashboard
 
-##API
+## API
 
 1. Install python dependencies
     ```
@@ -12,7 +12,7 @@ RECOVER LONG COVID dashboard
     python recover/index.py --debug
 
 
-##Web App (dev)
+## Web App (dev)
 
 1. Install node dependencies
     ```
