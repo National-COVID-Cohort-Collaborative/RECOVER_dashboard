@@ -12,6 +12,13 @@ from tornado.web import RequestHandler, HTTPError
 feeds = {
     'long-covid-summary': 'https://labs.cd2h.org/n3c-cohort/feeds/long_covid_summary.jsp',
     'severity': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/severity.jsp',
+    'before-after': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/before_after.jsp',
+    'severity': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/clinic_severity.jsp',
+    'covid_long_percentage': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/covid_long_percentage.jsp',
+    'symptom_grouped': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/symptom_grouped.jsp',
+    'symptom_grouped2': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/symptom_grouped2.jsp',
+    'symptom_summary': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/symptom_summary.jsp',
+    'symptom_ungrouped': 'https://n3c.cd2h.org/dashboard/new_ph/long_covid/feeds/symptom_ungrouped.jsp'
 }
 
 captions = [
