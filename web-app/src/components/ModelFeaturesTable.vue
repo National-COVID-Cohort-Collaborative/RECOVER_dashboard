@@ -287,7 +287,7 @@ export default {
         ],
     });
     }
-    axios.get('https://labs.cd2h.org/n3c-cohort/feeds/long_covid_summary.jsp').then(res=>{
+    axios.get('https://discovery.biothings.io/recover/api/long-covid-summary').then(res=>{
     // axios.get('/data.json').then(res=>{
         //get box figure boundaries
         let boxConfig ={};

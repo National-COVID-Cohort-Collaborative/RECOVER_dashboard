@@ -15,7 +15,7 @@ export default {
 
         let txt = ref('')
 
-        axios.get(`https://n3c.cd2h.org/dashboard/caption.jsp?tag=${props.name}&schema=n3c_recover.caption`)
+        axios.get(`https://discovery.biothings.io/recover/api/${props.name}`)
         .then(res=>{
             txt.value = res.data;
         }).catch((err) => {
